@@ -1,4 +1,4 @@
-package dsa.LinkedLists;
+package LinkedLists;
 
 import java.util.NoSuchElementException;
 
