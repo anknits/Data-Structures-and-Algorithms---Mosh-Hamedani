@@ -1,4 +1,4 @@
-package dsa.Arrays;
+package Arrays;
 
 public class Array {
     private int[] arr;
