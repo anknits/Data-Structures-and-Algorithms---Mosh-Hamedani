@@ -1,7 +1,6 @@
 package BinaryTrees;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Tree {
     private class Node {
