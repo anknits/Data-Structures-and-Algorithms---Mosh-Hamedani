@@ -262,6 +262,21 @@ public class Tree {
         getAncestors(root.rightChild, value, list);
     }
 
+    public boolean isBalanced() {
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node root) {
+        if (root == null)
+            return true;
+        if (Math.abs(height(root.leftChild) - height(root.rightChild)) > 1)
+            return false;
+        return isBalanced(root.leftChild) && isBalanced(root.rightChild);
+    }
+
+    public boolean isPerfect() {
+        return size() == (Math.pow(2, height() + 1) - 1);
+    }
 }
 
 // BFS - 20,10,30,6,14,24,3,8,26
