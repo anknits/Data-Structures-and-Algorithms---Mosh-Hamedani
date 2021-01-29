@@ -1,7 +1,11 @@
 package Heaps;
 
 public class PriorityQueue {
-    private Heap heap = new Heap();
+    private Heap heap;
+
+    public PriorityQueue(int size) {
+        heap = new Heap(size);
+    }
 
     public void enqueue(int value) {
         heap.insert(value);

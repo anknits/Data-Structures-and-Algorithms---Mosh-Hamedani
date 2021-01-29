@@ -11,7 +11,7 @@ public class Main {
 
     public static void createHeap() {
         System.out.println("createHeap");
-        var heap = new Heap();
+        var heap = new Heap(9);
         heap.insert(15);
         heap.insert(10);
         heap.insert(3);
@@ -28,7 +28,7 @@ public class Main {
     public static void heapSort() {
         System.out.println("heapSort");
         int[] numbers = { 5, 3, 10, 1, 4, 2 };
-        var heap = new Heap();
+        var heap = new Heap(numbers.length);
         for (var number : numbers)
             heap.insert(number);
         for (int i = 0; i < numbers.length; i++)
@@ -38,7 +38,7 @@ public class Main {
 
     public static void priorityQueue() {
         System.out.println("PriorityQueue");
-        PriorityQueue queue = new PriorityQueue();
+        PriorityQueue queue = new PriorityQueue(3);
         queue.enqueue(7);
         queue.enqueue(3);
         queue.enqueue(10);

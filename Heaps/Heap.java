@@ -6,6 +6,10 @@ public class Heap {
     private int[] array = new int[10];
     private int count;
 
+    public Heap(int size) {
+        array = new int[size];
+    }
+
     public void insert(int value) {
         if (isFull())
             throw new IllegalStateException();
