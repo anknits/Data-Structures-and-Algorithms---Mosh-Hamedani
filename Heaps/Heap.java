@@ -1,5 +1,7 @@
 package Heaps;
 
+import java.util.Arrays;
+
 public class Heap {
     private int[] array = new int[10];
     private int count;
@@ -27,6 +29,10 @@ public class Heap {
 
     public boolean isEmpty() {
         return count == 0;
+    }
+
+    public int max() {
+        return array[0];
     }
 
     private void bubbleDown() {
@@ -96,4 +102,10 @@ public class Heap {
     private int getParentIndex(int index) {
         return (index - 1) / 2;
     }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(array);
+    }
+
 }
