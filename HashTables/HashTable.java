@@ -2,6 +2,7 @@ package HashTables;
 
 import java.util.LinkedList;
 
+@SuppressWarnings("unchecked")
 public class HashTable {
 
     private class Entry {
