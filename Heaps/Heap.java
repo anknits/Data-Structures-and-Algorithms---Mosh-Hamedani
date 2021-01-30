@@ -112,4 +112,18 @@ public class Heap {
         return Arrays.toString(array);
     }
 
+    public boolean isMaxHeap() {
+        if (isEmpty())
+            throw new IllegalStateException();
+        return isMaxHeap(0);
+    }
+
+    private boolean isMaxHeap(int index) {
+        var lastParentIndex = array.length / 2 - 1;
+        if (index > lastParentIndex)
+            return true;
+        var leftChildIndex = getLeftChildIndex(index);
+        var rightChildIndex = getRightChildIndex(index);
+        return isValidParent(index) && isMaxHeap(leftChildIndex) && isMaxHeap(rightChildIndex);
+    }
 }
