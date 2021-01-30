@@ -32,4 +32,16 @@ public class Heapify {
         array[first] = array[second];
         array[second] = temp;
     }
+
+    public int findKthLargest(int[] numbers, int k) {
+        int n = numbers.length;
+        if (k < 1 || k > n)
+            throw new IllegalArgumentException();
+        var heap = new Heap(n);
+        for (var number : numbers)
+            heap.insert(number);
+        for (var i = 0; i < k - 1; i++)
+            heap.remove();
+        return heap.max();
+    }
 }

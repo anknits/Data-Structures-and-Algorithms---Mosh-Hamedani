@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // createHeap();
-        // heapSort();
-        // priorityQueue();
+        createHeap();
+        heapSort();
+        priorityQueue();
         heapify();
+        findKthLargest();
     }
 
     public static void createHeap() {
@@ -54,5 +55,12 @@ public class Main {
         var heapify = new Heapify();
         heapify.heapify(numbers);
         System.out.println(Arrays.toString(numbers));
+    }
+
+    public static void findKthLargest() {
+        int[] numbers = { 5, 3, 8, 4, 1, 12 };
+        var heapify = new Heapify();
+        int k = heapify.findKthLargest(numbers, 3);
+        System.out.println(k);
     }
 }
