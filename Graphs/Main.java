@@ -10,9 +10,17 @@ public class Main {
         graph.addEdge("A", "B");
         graph.addEdge("A", "C");
         graph.addEdge("B", "D");
-        graph.addEdge("D", "C");
-        graph.removeEdge("A", "C");
-        graph.removeNode("B");
+        graph.addEdge("C", "B");
+        // graph.addEdge("C", "D");
+        // graph.addEdge("D", "C");
+        // graph.removeEdge("A", "C");
+        // graph.removeNode("B");
+        // graph.depthFirstTraversal("A");
         graph.print();
+        // graph.depthFirstTraversalIterative("A");
+        // graph.breadthFirstTraversal("A");
+        // System.out.println(graph.topologicalSorting());
+        // graph.addEdge("D", "C"); // hasCycle: true
+        System.out.println(graph.hasCycle());
     }
 }
